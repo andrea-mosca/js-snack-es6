@@ -56,7 +56,10 @@ for(let i = 0; i < footballTeams.length; i++){
 // creazione array che contenga solo nomi squadre e falli subiti
 const teamsNameFouls = [];
 for(let i = 0; i < footballTeams.length; i++){
-    teamsNameFouls.push(footballTeams[i].name);
-    teamsNameFouls.push(footballTeams[i].sufferedFouls);
-}
+    let currentTeam = {name: footballTeams[i].name, sufferedFouls: footballTeams[i].sufferedFouls};
+
+    teamsNameFouls.push(currentTeam);
+};
+// stampa il nuovo array di ogetti
+console.log(footballTeams);
 console.log(teamsNameFouls);
