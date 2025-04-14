@@ -33,10 +33,10 @@ console.log(bikeMinWeight);
 // * SNACK 2
 const footballTeams = [
     {name:"squadra 1", points: 0, sufferedFouls: 0},
-    {name:"squadra 1", points: 0, sufferedFouls: 0},
-    {name:"squadra 1", points: 0, sufferedFouls: 0},
-    {name:"squadra 1", points: 0, sufferedFouls: 0},
-    {name:"squadra 1", points: 0, sufferedFouls: 0}
+    {name:"squadra 2", points: 0, sufferedFouls: 0},
+    {name:"squadra 3", points: 0, sufferedFouls: 0},
+    {name:"squadra 4", points: 0, sufferedFouls: 0},
+    {name:"squadra 5", points: 0, sufferedFouls: 0}
 ];
 
 // funzione che genera numeri casuali
@@ -53,4 +53,10 @@ for(let i = 0; i < footballTeams.length; i++){
     footballTeams[i].sufferedFouls = generateRandomNumber(0, 500);
 };
 
-console.log(footballTeams);
+// creazione array che contenga solo nomi squadre e falli subiti
+const teamsNameFouls = [];
+for(let i = 0; i < footballTeams.length; i++){
+    teamsNameFouls.push(footballTeams[i].name);
+    teamsNameFouls.push(footballTeams[i].sufferedFouls);
+}
+console.log(teamsNameFouls);
