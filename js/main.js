@@ -30,6 +30,7 @@ for(let i = 1; i < bikes.length; i++){
 };
 console.log(bikeMinWeight);
 
+
 // * SNACK 2
 const footballTeams = [
     {name:"squadra 1", points: 0, sufferedFouls: 0},
@@ -44,12 +45,9 @@ const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// numeri casuali assegnati ai punti di ogni squadra
+// numeri casuali assegnati ai punti e ai falli di ogni squadra
 for(let i = 0; i < footballTeams.length; i++){
     footballTeams[i].points = generateRandomNumber(0, 80);
-};
-// numeri casuali assegnati ai falli subiti di ogni squadra
-for(let i = 0; i < footballTeams.length; i++){
     footballTeams[i].sufferedFouls = generateRandomNumber(0, 500);
 };
 
